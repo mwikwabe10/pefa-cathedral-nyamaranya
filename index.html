@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Pefa Nyamaranya Cathedral</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PEFA Cathedral Nyamaranya</title>
+<style>
+    :root {
+        --primary: #1e3a8a;
+        --accent: #b45309;
+        --bg: #ffffff;
+        --surface: #f8fafc;
+        --text: #334155;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family: 'Inter', system-ui, sans-serif; scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* NAVBAR */
+    nav { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top:0; z-index:1000; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; color: var(--primary); font-size: 1.1rem; text-transform: uppercase; }
+    .brand img { height: 40px; width: auto; }
+    .nav-links a { margin-left: 15px; text-decoration: none; font-size: 10px; font-weight: 800; color: var(--text); text-transform: uppercase; letter-spacing: 0.05em; transition: 0.3s; }
+    .btn-nav { background: var(--accent); color: white !important; padding: 8px 16px; border-radius: 4px; }
+    .nav-links a:hover { color: var(--accent); }
+
+   .hero { 
+    height: 60vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    /* Keep your existing background setup */
+    background: url("https://i.postimg.cc/JnDTY8mX/church-photo.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+}
+
+/* ADD THIS TO MAKE THE TEXT POP */
+.hero h1 {
+    color: #ffffff; /* Change to white for better contrast */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Dark shadow behind the text */
+    font-size: 3rem; /* Optional: adjust size if needed */
+}
+
+.hero p {
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+}
+    
+    /* SECTIONS */
+    section { padding: 60px 5%; }
+    .section-title { font-size: 1.8rem; font-weight: 900; text-align: center; margin-bottom: 40px; color: var(--primary); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+
+    /* LEADERSHIP */
+    .profile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; justify-items: center; max-width: 1000px; margin: auto; }
+    .profile-card { text-align: center; padding: 20px; }
+    .profile-img-wrapper { width: 180px; height: 180px; margin: 0 auto 20px; }
+    .profile-img { width: 100%; height: 100%; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; object-position: top; }
+    .profile-card strong { color: var(--primary); display: block; margin-top: 10px; text-transform: uppercase; font-size: 0.9rem; }
+    .profile-card p { color: var(--accent); font-weight: 600; font-size: 0.8rem; }
+
+    /* IMPROVED HOMECELLS */
+    .homecell-card { background: var(--primary); color: white; padding: 30px; border-radius: 10px; text-align: center; border-bottom: 5px solid var(--accent); }
+    .homecell-card strong { font-size: 1.4rem; display: block; margin-bottom: 10px; }
+
+    /* GALLERY ZOOM */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .gallery-item { height: 200px; border-radius: 6px; overflow: hidden; cursor: pointer; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+    .gallery-item img:hover { transform: scale(1.05); }
+
+    /* LIGHTBOX */
+    #lightbox { display: none; position: fixed; z-index: 9999; top:0; left:0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
+    #lightbox img { max-width: 90%; max-height: 80%; border: 4px solid white; border-radius: 4px; }
+
+    /* COMPONENTS */
+    .card { background: var(--surface); padding: 30px; border-radius: 6px; border: 1px solid #e2e8f0; transition: 0.3s; }
+    .card:hover { border-color: var(--accent); transform: translateY(-5px); }
+    .ministry { background: var(--primary); color: white; padding: 25px; border-radius: 6px; text-align: center; font-weight: 700; transition: 0.4s ease; cursor: pointer; }
+    .ministry:hover { background: var(--accent); transform: scale(1.05); }
+    button { width: 100%; padding: 15px; background: var(--primary); color: white; border: none; font-weight: 800; cursor: pointer; text-transform: uppercase; border-radius: 4px; transition: 0.3s; }
+    button:hover { background: var(--accent); }
+    footer { background: var(--primary); color: #cbd5e1; text-align: center; padding: 30px; font-size: 0.8rem; }
+  
+  
+   /* MOBILE OPTIMIZATIONS */
+@media screen and (max-width: 768px) {
+    /* Stack navigation */
+    nav { flex-direction: column; padding: 15px; }
+    .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px; }
+    .nav-links a { margin-left: 0 !important; font-size: 11px !important; }
+
+    /* Fix Hero */
+    .hero { height: 40vh; }
+    .hero h1 { font-size: 1.8rem !important; }
+
+    /* Force grid stacking */
+    .grid { grid-template-columns: 1fr !important; }
+    
+    /* Gallery adjustments */
+    .gallery-grid { grid-template-columns: 1fr !important; }
+}  
+</style>
+</head>  
+  
+<body>
+
+<nav>
+    <div class="brand"><img src="https://i.postimg.cc/Xq7DCXv4/pefa-church-logo-png-seeklogo-610322.png" alt="Logo"> PEFA Cathedral Nyamaranya</div>
+    <div class="nav-links">
+        <a href="#about">About</a><a href="#leadership">Leadership</a><a href="#services">Services</a>
+        <a href="#ministries">Ministries</a><a href="#homecells">Homecells</a><a href="#events">Events</a>
+        <a href="#gallery">Gallery</a><a href="#donate" class="btn-nav">Give</a>
+    </div>
+</nav>
+
+<section class="hero"><div><h1>Empowering Lives</h1><p>Raising Disciples, Transforming Communities</p></div></section>
+
+<section id="about" style="background: var(--surface);">
+    <div class="section-title">About Us</div>
+    
+    <div style="max-width: 800px; margin: 0 auto 50px; text-align: center; color: var(--text);">
+        <p>PEFA Cathedral Nyamaranya is a vibrant, faith-filled community dedicated to spreading the love of Christ. We are committed to nurturing spiritual growth, fostering meaningful fellowship, and empowering every individual to live out their God-given purpose while serving our local community with compassion and excellence.</p>
+    </div>
+
+    <div class="grid">
+        <div class="card" style="text-align: center; border-top: 5px solid var(--primary);">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">👁️</div>
+            <h3 style="color: var(--primary); margin-bottom: 10px;">Our Vision</h3>
+            <p>Christ-centered disciples transforming communities.</p>
+        </div>
+
+        <div class="card" style="text-align: center; border-top: 5px solid var(--accent);">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">🎯</div>
+            <h3 style="color: var(--accent); margin-bottom: 10px;">Our Mission</h3>
+            <p>Preaching the Gospel and empowering people globally.</p>
+        </div>
+
+        <div class="card" style="text-align: center; border-top: 5px solid var(--primary);">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">💎</div>
+            <h3 style="color: var(--primary); margin-bottom: 10px;">Core Values</h3>
+            <ul style="list-style: none; padding: 0; color: var(--text);">
+                <li>✨ Faith</li>
+                <li>✨ Integrity</li>
+                <li>✨ Excellence</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="leadership" style="background:var(--surface);">
+    <div class="section-title">Church Leadership</div>
+    <div class="profile-grid">
+        <div class="profile-card"><div class="profile-img-wrapper"><img src="https://i.postimg.cc/XNkmyV2z/Re-Nyakioma.jpg" alt="Bishop" class="profile-img"></div><strong>Bishop Joshua Nyakioma</strong><p>Spiritual Overseer</p></div>
+        <div class="profile-card"><div class="profile-img-wrapper"><img src="https://i.postimg.cc/cJWfYN51/Rev-Davy.jpg" alt="Rev. Davy" class="profile-img"></div><strong>Rev. Davy Nyamesegere</strong><p>Pastoral Administration</p></div>
+        <div class="profile-card"><div class="profile-img-wrapper"><img src="https://i.postimg.cc/rFt4PpBw/Rev-Job.jpg" alt="Rev. Job" class="profile-img"></div><strong>Rev. Job Mwita</strong><p>Pastoral Administration</p></div>
+    </div>
+</section>
+
+<section id="services" style="padding: 80px 5%;">
+    <div class="section-title">Weekly Services</div>
+    <div class="card" style="max-width: 650px; margin: auto; background: white; border-top: 5px solid var(--primary);">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid #e2e8f0;">
+            <div>
+                <strong style="display: block; font-size: 1.1rem; color: var(--primary);">Sunday Worship</strong>
+                <span style="font-size: 0.85rem; color: #64748b;">Main Sanctuary</span>
+            </div>
+            <div style="background: var(--surface); padding: 8px 15px; border-radius: 4px; font-weight: 800;">8:00 AM - 11:30 AM</div>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px; border-bottom: 1px solid #e2e8f0;">
+            <div>
+                <strong style="display: block; font-size: 1.1rem; color: var(--primary);">Thursday Service</strong>
+                <span style="font-size: 0.85rem; color: #64748b;">Bible Study & Prayer</span>
+            </div>
+            <div style="background: var(--surface); padding: 8px 15px; border-radius: 4px; font-weight: 800;">6:00 PM</div>
+        </div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px;">
+            <div>
+                <strong style="display: block; font-size: 1.1rem; color: var(--primary);">Friday Prayers</strong>
+                <span style="font-size: 0.85rem; color: #64748b;">Intercession Ministry</span>
+            </div>
+            <div style="background: var(--surface); padding: 8px 15px; border-radius: 4px; font-weight: 800;">6:00 PM</div>
+        </div>
+    </div>
+</section>
+
+<section id="ministries" style="background: var(--surface); padding: 80px 5%;">
+    <div class="section-title">Our Ministries</div>
+    <div class="grid" style="max-width: 1000px; margin: auto;">
+        
+        <div class="ministry" style="background: white; color: var(--primary); border: 1px solid #e2e8f0; padding: 30px; text-align: center; border-radius: 8px; transition: 0.3s;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">🔥</div>
+            <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Youth</strong>
+            <p style="font-size: 0.85rem; color: #64748b;">Empowering the next generation.</p>
+        </div>
+
+        <div class="ministry" style="background: white; color: var(--primary); border: 1px solid #e2e8f0; padding: 30px; text-align: center; border-radius: 8px; transition: 0.3s;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">👑</div>
+            <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Women</strong>
+            <p style="font-size: 0.85rem; color: #64748b;">Nurturing families and faith.</p>
+        </div>
+
+        <div class="ministry" style="background: white; color: var(--primary); border: 1px solid #e2e8f0; padding: 30px; text-align: center; border-radius: 8px; transition: 0.3s;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">🛡️</div>
+            <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Men</strong>
+            <p style="font-size: 0.85rem; color: #64748b;">Leading with integrity.</p>
+        </div>
+
+        <div class="ministry" style="background: white; color: var(--primary); border: 1px solid #e2e8f0; padding: 30px; text-align: center; border-radius: 8px; transition: 0.3s;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">🧸</div>
+            <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Children</strong>
+            <p style="font-size: 0.85rem; color: #64748b;">Raising seeds of righteousness.</p>
+        </div>
+
+        <div class="ministry" style="background: white; color: var(--primary); border: 1px solid #e2e8f0; padding: 30px; text-align: center; border-radius: 8px; transition: 0.3s;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">🎵</div>
+            <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Worship</strong>
+            <p style="font-size: 0.85rem; color: #64748b;">Lifting hearts in praise.</p>
+        </div>
+
+        <div class="ministry" style="background: white; color: var(--primary); border: 1px solid #e2e8f0; padding: 30px; text-align: center; border-radius: 8px; transition: 0.3s;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">🌍</div>
+            <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Outreach</strong>
+            <p style="font-size: 0.85rem; color: #64748b;">Reaching our community.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="homecells" style="background: #f1f5f9; padding: 80px 5%;">
+    <div class="section-title" style="margin-bottom: 50px;">Our Powerful Homecells</div>
+    <div class="grid" style="max-width: 900px; margin: auto;">
+        <div class="card" style="border-top: 5px solid var(--primary); text-align: center; background: white;">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">🏠</div>
+            <strong style="font-size: 1.5rem; color: var(--primary);">COG</strong>
+            <p style="margin: 15px 0;">Empowering disciples through fellowship and spiritual growth.</p>
+            <div style="background: var(--surface); padding: 10px; border-radius: 4px; font-weight: 700; color: var(--accent);">
+                Leader: Rev. Job Mwita
+            </div>
+        </div>
+        
+        <div class="card" style="border-top: 5px solid var(--primary); text-align: center; background: white;">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">✨</div>
+            <strong style="font-size: 1.5rem; color: var(--primary);">EBENEZER</strong>
+            <p style="margin: 15px 0;">Advancing the Kingdom of God through impact and prayer.</p>
+            <div style="background: var(--surface); padding: 10px; border-radius: 4px; font-weight: 700; color: var(--accent);">
+                Leader: Rev. David Nyamesegere
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="events" style="background: white;">
+    <div class="section-title">Upcoming Events</div>
+    <div class="grid" style="max-width: 1000px; margin: auto;">
+        
+        <div class="card" style="border-left: 5px solid var(--accent); background: var(--surface);">
+            <div style="font-size: 0.8rem; color: var(--accent); font-weight: 800; text-transform: uppercase; margin-bottom: 5px;">Conference</div>
+            <strong style="font-size: 1.2rem; display: block; margin-bottom: 10px;">Annual Revival Meeting</strong>
+            <p style="font-size: 0.9rem;">Join us for a powerful time of worship, healing, and spiritual renewal.</p>
+        </div>
+
+        <div class="card" style="border-left: 5px solid var(--accent); background: var(--surface);">
+            <div style="font-size: 0.8rem; color: var(--accent); font-weight: 800; text-transform: uppercase; margin-bottom: 5px;">Youth Ministry</div>
+            <strong style="font-size: 1.2rem; display: block; margin-bottom: 10px;">Youth Camp</strong>
+            <p style="font-size: 0.9rem;">Equipping the next generation with spiritual training and life skills.</p>
+        </div>
+
+        <div class="card" style="border-left: 5px solid var(--accent); background: var(--surface);">
+            <div style="font-size: 0.8rem; color: var(--accent); font-weight: 800; text-transform: uppercase; margin-bottom: 5px;">Outreach</div>
+            <strong style="font-size: 1.2rem; display: block; margin-bottom: 10px;">Medical Camp</strong>
+            <p style="font-size: 0.9rem;">Extending the love of God through community health support and service.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="gallery">
+    <div class="section-title">Church Gallery</div>
+    <div class="gallery-grid">
+        <div class="gallery-item-wrapper" style="cursor: pointer;" onclick="showLightbox(this.querySelector('img').src, this.querySelector('.caption').innerText)">
+            <div class="gallery-item"><img src="https://i.postimg.cc/JnDTY8mX/church-photo.jpg" alt="Gallery 1"></div>
+            <div class="caption" style="margin-top: 8px; font-size: 0.85rem; font-weight: 600; text-align: center; color: var(--text);">Sunday Morning Service</div>
+        </div>
+        <div class="gallery-item-wrapper" style="cursor: pointer;" onclick="showLightbox(this.querySelector('img').src, this.querySelector('.caption').innerText)">
+            <div class="gallery-item"><img src="https://i.postimg.cc/fWvX4Fy4/outreach.jpg" alt="Gallery 2"></div>
+            <div class="caption" style="margin-top: 8px; font-size: 0.85rem; font-weight: 600; text-align: center; color: var(--text);">Community Outreach</div>
+        </div>
+        <div class="gallery-item-wrapper" style="cursor: pointer;" onclick="showLightbox(this.querySelector('img').src, this.querySelector('.caption').innerText)">
+            <div class="gallery-item"><img src="https://i.postimg.cc/15fzWYNg/crusade.jpg" alt="Gallery 3"></div>
+            <div class="caption" style="margin-top: 8px; font-size: 0.85rem; font-weight: 600; text-align: center; color: var(--text);">Annual Crusade</div>
+        </div>
+        <div class="gallery-item-wrapper" style="cursor: pointer;" onclick="showLightbox(this.querySelector('img').src, this.querySelector('.caption').innerText)">
+            <div class="gallery-item"><img src="https://i.postimg.cc/v8pmNt7P/crsade.jpg" alt="Gallery 4"></div>
+            <div class="caption" style="margin-top: 8px; font-size: 0.85rem; font-weight: 600; text-align: center; color: var(--text);">Youth Revival</div>
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" onclick="this.style.display='none'" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); flex-direction: column; justify-content: center; align-items: center;">
+    <img id="lightbox-img" src="" alt="Zoomed view" style="max-width: 90%; max-height: 75%; border: 3px solid white; border-radius: 4px;">
+    <p id="lightbox-caption" style="color: white; margin-top: 15px; font-size: 1.2rem; font-weight: 700;"></p>
+</div>
+
+<script>
+    function showLightbox(src, caption) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox-caption').innerText = caption;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+</script>
+
+<section id="donate" style="background: var(--surface); padding: 80px 5%;">
+    <div class="section-title">Support Our Ministry</div>
+    <p style="text-align: center; margin-bottom: 40px; color: var(--text);">Your faithful support helps us transform lives. Choose your preferred method below:</p>
+
+    <div class="grid" style="max-width: 900px; margin: auto;">
+        
+        <div class="card" style="border-top: 5px solid var(--accent); text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">📱</div>
+            <strong style="display: block; font-size: 1.2rem; color: var(--primary); margin-bottom: 15px;">M-Pesa Giving</strong>
+            <p style="margin-bottom: 10px;">Paybill Number: <strong>123456</strong></p>
+            <p style="margin-bottom: 20px;">Account Name: <strong>YourChurch</strong></p>
+            <a href="stk://123456" style="text-decoration: none;">
+            </a>
+        </div>
+
+        <div class="card" style="border-top: 5px solid var(--primary); text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 10px;">🏦</div>
+            <strong style="display: block; font-size: 1.2rem; color: var(--primary); margin-bottom: 15px;">Bank Deposit</strong>
+            <p style="margin-bottom: 10px;">Bank Name: <strong>Equity Bank</strong></p>
+            <p style="margin-bottom: 20px;">Acc: <strong>000-000-0000</strong></p>
+            <a href="mailto:treasurer@church.org" style="text-decoration: none;">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact" style="background: var(--surface); padding: 80px 5%;">
+    <div class="section-title">Prayer Request</div>
+    <div class="card" style="max-width: 700px; margin: auto; text-align: center; background: white;">
+        <p style="margin-bottom: 25px; color: var(--text);">"The prayer of a righteous person is powerful and effective." — James 5:16. <br> Please share your prayer request with us; our pastoral team is ready to stand with you in faith.</p>
+        
+        <div style="display: grid; gap: 15px; text-align: left;">
+            <input style="width:100%; padding:15px; border:1px solid #ddd; border-radius:4px;" placeholder="Your Name">
+            <input style="width:100%; padding:15px; border:1px solid #ddd; border-radius:4px;" placeholder="Your Phone Number">
+            <textarea style="width:100%; padding:15px; border:1px solid #ddd; border-radius:4px;" rows="5" placeholder="Please share your prayer request..."></textarea>
+            <button style="margin-top: 10px;">Submit Prayer Request</button>
+        </div>
+    </div>
+    
+    <div style="max-width: 700px; margin: 40px auto 0; text-align: center;">
+        <strong>Need urgent prayer?</strong><br>
+        <p>Call our office line: <strong>+254 700 000 000</strong></p>
+    </div>
+</section>
+
+<footer>© 2026 PEFA Cathedral Nyamaranya | Designed by John Mwikwabe</footer>
+
+<script>
+    function showLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
